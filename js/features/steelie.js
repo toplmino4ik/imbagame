@@ -228,10 +228,10 @@ MAIN.steel = {
 }
 
 RESET.steel = {
-    unl: ()=>(tmp.minStats.gh>=10||player.gTimes>0)&&!tmp.outsideNormal,
+    unl: ()=>(tmp.minStats.gh>=1||player.gTimes>0)&&!tmp.outsideNormal,
 
-    req: ()=>player.level>=400,
-    reqDesc: ()=>`Reach Level 400.`,
+    req: ()=>player.level>=100,
+    reqDesc: ()=>`Reach Level 100.`,
 
     resetDesc: `Reset everything grasshop does, but it benefits from the milestones for grasshop.<br>Gain more Steels based on grasshop and Crystal.`,
     resetGain: ()=> `Gain <b>${tmp.steelGain.format(0)}</b> Steel`,
