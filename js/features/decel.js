@@ -83,11 +83,11 @@ UPGS.aGrass = {
             res: "aGrass",
             icon: ['Curr/Charge'],
             
-            cost: i => Decimal.pow(1.000005,scale(E(i),1e5,2,0)).mul(1e3).ceil(),
+            cost: i => Decimal.pow(1.05,scale(E(i),1e5,2,0)).mul(1e3).ceil(),
             bulk: i => i.div(1e3).max(1).log(1.25).scale(1e5,2,0,true).floor().add(1),
 
             effect(i) {
-                let x = Decimal.pow(6,i.div(25).floor()).mul(i.div(10).add(1)).softcap(1e9,0.25,0)
+                let x = Decimal.pow(60000,i.div(25).floor()).mul(i.div(10).add(1)).softcap(1e9,0.25,0)
 
                 return x
             },
