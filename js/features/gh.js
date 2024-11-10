@@ -1,5 +1,5 @@
 MAIN.gh = {
-    req: ()=> Math.ceil(1+E(player.grasshop).scale(0,2,0).toNumber()*10),
+    req: ()=> Math.ceil(1+E(player.grasshop).scale(1,2,0).toNumber()*10),
     bulk: ()=> player.level>=300?player.level.sub(300).div(10).scale(20,2,0,true).floor().toNumber()+5:0,
 
     milestone: [
