@@ -85,6 +85,7 @@ RESET.gal = {
         }
 
         if (player.lowGH > -60) {
+            player.grassshop = 0
             player.grassskip = 0
         }
 
