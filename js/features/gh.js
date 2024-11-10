@@ -1,6 +1,6 @@
 MAIN.gh = {
-    req: ()=> Math.ceil(1+E(player.grasshop).scale(1,2,0).toNumber()*10),
-    bulk: ()=> player.level>=300?player.level.sub(300).div(10).scale(20,2,0,true).floor().toNumber()+5:0,
+    req: ()=> Math.ceil(300+E(player.grasshop).scale(20,2,0).toNumber()*10),
+    bulk: ()=> player.level>=300?player.level.sub(300).div(10).scale(20,2,0,true).floor().toNumber()+1:0,
 
     milestone: [
         {
@@ -9,48 +9,48 @@ MAIN.gh = {
             effect: ()=>Decimal.pow(500,tmp.minStats.gh),
             effDesc: x=> format(x)+"x",
         },{
-            r: 2,
+            r: 1,
             desc: `Gain <b class="green">5x</b> more XP. XP gain is increased by <b class="green">50000%</b> every grasshop.`,
             effect: ()=>Decimal.pow(500,tmp.minStats.gh),
             effDesc: x=> format(x)+"x",
         },{
-            r: 3,
+            r: 1,
             desc: `Gain <b class="green">5x</b> more TP. TP gain is increased by <b class="green">50%</b> every grasshop. Keep Prestige challenges on Grasshop.`,
             effect: ()=>Decimal.pow(1.5,tmp.minStats.gh),
             effDesc: x=> format(x)+"x",
         },{
-            r: 4,
+            r: 1,
             desc: `Platinum worth <b class="green">+1</b> per grasshop (start at 3). Unlock more automation upgrades.`,
             effect: ()=>Math.max(0,tmp.minStats.gh-3),
             effDesc: x=> "+"+format(x,0),
         },{
-            r: 5,
+            r: 1,
             desc: `Keep Crystallize challenges on Grasshop.`,
         },{
-            r: 6,
+            r: 1,
             desc: `Platinum Chance <b class="green">2x</b>. Unlock perk autobuyer upgrade.`,
         },{
-            r: 7,
+            r: 1,
             desc: `Tier multiplier's exponent is increased by <b class="green">25%</b>.`,
         },{
-            r: 10,
+            r: 1,
             desc: `Unlock Steelie reset. Grasshop does not reset perks.`,
         },{
-            r: 14,
+            r: 1,
             desc: `Unlock two more generator upgrades related to charge.`,
         },{
-            r: 15,
+            r: 1,
             desc: `Charge rate is increased by <b class="green">25%</b> every grasshop.`,
             effect: ()=>Decimal.pow(1.25,tmp.minStats.gh),
             effDesc: x=> format(x)+"x",
         },{
-            r: 18,
+            r: 1,
             desc: `Charger charge bonuses increase <b class="green">1</b> OoM (order of magnitude) sooner.`,
         },{
-            r: 20,
+            r: 1,
             desc: `Charger charge bonuses increase another <b class="green">1</b> OoM sooner. Grasshop animation will no longer play.`,
         },{
-            r: 24,
+            r: 1,
             desc: `Charger charge bonuses increase another <b class="green">1</b> OoM sooner per grasshop starting at 24.`,
             effect: ()=>Math.max(tmp.minStats.gh-23,0),
             effDesc: x=> "+"+format(x,0)+" later",
