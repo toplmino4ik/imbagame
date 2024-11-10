@@ -88,61 +88,61 @@ MAIN.agh_milestone = [
         effect: ()=>Decimal.pow(1.25,tmp.total_astral),
         effDesc: x=> format(x)+"x",
     },{
-        r: 4,
+        r: 5,
         desc: `Gain <b class="green">x10</b> more platinum and SP.<br>Active sixth 7 grasshop milestones if you haven't reached them.`,
     },{
-        r: 0,
+        r: 5,
         desc: `Unlock a new rocket fuel for stars.<br>Unlock milestones below grasshop 0.`,
     },{
-        r: -4,
+        r: 5,
         desc: `Charger charge bonuses increase <b class="green">1</b> OoM sooner per grassskip.`,
         effect: ()=>Math.max(tmp.minStats.gs,0),
         effDesc: x=> "+"+format(x,0)+" later",
     },{
-        r: -8,
+        r: 5,
         desc: `Increase SP gained by <b class="green">25%</b> every zero grasshop grass-skips, ending at 60.<br>Steelie no longer reset its time.`,
         effect: ()=>Decimal.pow(1.25,Math.min(Math.max(-player.lowGH,0),60)),
         effDesc: x=> format(x)+"x",
     },{
-        r: -12,
+        r: 5,
         desc: `Increase Fun gained by <b class="green">10%</b> every astral.<br>You don't lose platinum on galactic.`,
         effect: ()=>Decimal.pow(1.1,tmp.total_astral),
         effDesc: x=> format(x)+"x",
     },{
-        r: -16,
+        r: 5,
         desc: `Raise SP gain of the <b class="green">1.25</b>th power.<br>Galactic no longer reset Steelie time.`,
     },{
-        r: -20,
+        r: 5,
         desc: `Keep momentum and momentum upgrades on galactic.<br>Unlock more momentum upgrades, one moonstone upgrade.`,
     },{
-        r: -24,
+        r: 5,
         desc: `Unlock the <b class="green">Dark Matter Plant</b> (on left of Star Chart).`,
     },{
-        r: -28,
+        r: 5,
         desc: `Increase momentum gain by <b class="green">+1</b> per 8 astral.`,
         effect: ()=>Math.floor(tmp.total_astral/8),
         effDesc: x=> "+"+format(x,0),
     },{
-        r: -32,
+        r: 5,
         desc: `Unlock more dark matter upgrades.<br>Unlock the <b class="green">Planetoid</b>.`,
     },{
-        r: -36,
+        r: 5,
         desc: `Reduce XP penalty in <b class="green">Unnatural Realm</b>.<br>Auto Grasshop & Grass-skip no longer reset anything.`,
     },{
-        r: -40,
+        r: 5,
         desc: `Rings gain is increased by <b class="green">10%</b> every astral.`,
         effect: ()=>Decimal.pow(1.1,softcap(tmp.total_astral,120,0.5,0)),
         effDesc: x=> format(x)+"x",
     },{
-        r: -44,
+        r: 5,
         desc: `Momentum gain is increased based on rocket part at a reduced rate.`,
         effect: ()=>Decimal.pow(1.05,player.rocket.part).mul(player.rocket.part+1),
         effDesc: x=> format(x)+"x",
     },{
-        r: -48,
+        r: 5,
         desc: `Unlock the <b class="green">Stellar Obelisk</b> (aka. Astral Prestige, on top of star chart) and <b class="green">Planetary</b>.`,
     },{
-        r: -60,
+        r: 5,
         desc: `Keep grasshop & grass-skip on galactic/sacrifice.<br><l>Will stop getting zero grasshop and more grass-skips.</l>`,
     },
 ]
