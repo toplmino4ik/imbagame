@@ -255,7 +255,7 @@ RESET.steel = {
     },
 
     doReset(order="steel") {
-        if (player.lowGH > -8) player.sTime = 0
+        if (player.lowGH > -1) player.sTime = 0
         player.chargeRate = E(0)
 
         RESET.gh.reset(true)
