@@ -2,7 +2,7 @@ MAIN.gal = {
     gain() {
         if (hasCentralized(9)) return player.grass.floor();
 
-        let y = 10
+        let y = 10000000000000
 
         if (tmp.minStats.gs>0) y += getGSEffect(0,0)
 
@@ -74,46 +74,23 @@ RESET.gal = {
         if (!hasStarTree('auto',0)) resetUpgrades('auto')
         resetUpgrades('plat')
 
-        player.decel = false
-        player.rocket.total_fp = E(0)
-        player.rocket.amount = E(0)
-        player.rocket.part = 0
-
         if (player.lowGH > -20) {
             startMomentum(true)
             player.momentum = E(0)
         }
 
-        player.oil = E(0)
-        player.bestOil = E(0)
-        player.ap = E(0)
-        player.bestAP = E(0)
-        player.aGrass = E(0)
-        player.aBestGrass = E(0)
         if (!hasStarTree('reserv',12)) {
             player.bestOil2 = E(0)
             player.bestAP2 = E(0)
         }
-        player.aRes.level = E(0)
-        player.aRes.tier = E(0)
-        player.aRes.xp = E(0)
-        player.aRes.tp = E(0)
-
-        player.steel = E(0)
-        player.chargeRate = E(0)
-        player.bestCharge = E(0)
 
         if (player.lowGH > -60) {
-            player.grasshop = 0
             player.grassskip = 0
         }
 
         if (player.lowGH > -12 || order=='sac') player.plat = E(0)
 
         if (player.lowGH > 28) player.chal.comp = []
-
-        resetUpgrades('ap')
-        resetUpgrades('oil')
         resetUpgrades('aGrass')
 
         if (player.lowGH > -16) player.sTime = 0
