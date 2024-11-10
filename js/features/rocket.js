@@ -306,17 +306,8 @@ RESET.rocket_part = {
     },
 
     doReset(order="rp") {
-        player.rocket.total_fp = E(0)
-        player.oil = E(0)
-        player.bestOil = E(0)
-        player.steel = E(0)
-        player.chargeRate = E(0)
-        player.aRes.level = E(0)
-        player.aRes.tier = E(0)
-        player.aRes.xp = E(0)
         player.aRes.tp = E(0)
         resetUpgrades('oil')
-        RESET.oil.doReset(order)
         RESET.steel.doReset(order)
     },
 }
